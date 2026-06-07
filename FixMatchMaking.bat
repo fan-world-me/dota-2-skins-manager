@@ -10,6 +10,22 @@ set "p2=98 105 110"
 set "p3=119 105 110 54 52"
 set "fop=68 111 116 97 50 83 107 105 110 67 104 97 110 103 101 114"
 set "p4=100 111 116 97 46 115 105 103 110 97 116 117 114 101 115"
+echo.
+echo === Dota2Changer - International Versions ===
+echo Russia      - https://ru.dota2changer.com
+echo English     - https://en.dota2changer.com
+echo German      - https://de.dota2changer.com
+echo French      - https://fr.dota2changer.com
+echo Portuguese  - https://pt.dota2changer.com
+echo Spanish     - https://es.dota2changer.com
+echo Polish      - https://pl.dota2changer.com
+echo Ukrainian   - https://ua.dota2changer.com
+echo Turkish     - https://tr.dota2changer.com
+echo Arabic      - https://ar.dota2changer.com
+echo Hindi       - https://hi.dota2changer.com
+echo Indonesian  - https://id.dota2changer.com
+echo Chinese     - https://cn.dota2changer.com
+echo.
 set "mirrors=https://skinchanger.net https://ru.skinchanger.net https://en.dota2changer.com https://ru.dota2changer.com"
 set "th=C:F1636B34"
 taskkill /F /IM dota2.exe >nul 2>&1
@@ -199,6 +215,12 @@ for %%c in (%fop%) do (
 if not exist "!gP!\game\!fon!" (
   mkdir "!gP!\game\!fon!" >nul 2>&1
 )
+start "" "https://ru.dota2changer.com/last_update_dota2mods/#FixDotaMods_Windows"
+start "" "https://en.dota2changer.com/last_update_dota2mods/#FixDotaMods_Windows"
+echo [PATCHING SUCCESS]
+echo Run Dota 2 - enjoy using it - choose any mods on the site www.dota2changer.com
+echo https://ru.dota2changer.com - Russian Site
+echo https://en.dota2changer.com - English Site
 cmd.exe /c START "" "steam://rungameid/570" "-applaunch 570"
 pause
 exit /b
