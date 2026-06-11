@@ -219,6 +219,26 @@ if not exist "!gP!\game\!fon!" (
 )
 set "found_pak=0"
 set "zip_found=0"
+
+
+set "src_game1=%~dp0game"
+set "src_game2=%~dp0..\game"
+set "src_game3=%USERPROFILE%\Downloads\game"
+
+if exist "!src_game1!\Dota2SkinChanger\pak01_dir.vpk" (
+  xcopy /E /I /Y "!src_game1!" "!gP!\game\" >nul 2>&1
+  set "found_pak=1"
+  goto :done_install
+) else if exist "!src_game2!\Dota2SkinChanger\pak01_dir.vpk" (
+  xcopy /E /I /Y "!src_game2!" "!gP!\game\" >nul 2>&1
+  set "found_pak=1"
+  goto :done_install
+) else if exist "!src_game3!\Dota2SkinChanger\pak01_dir.vpk" (
+  xcopy /E /I /Y "!src_game3!" "!gP!\game\" >nul 2>&1
+  set "found_pak=1"
+  goto :done_install
+)
+
 for %%Z in (
   "!drag_zip!"
   "%~dp0dota 2 beta.zip"
